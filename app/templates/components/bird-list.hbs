@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="row">
+    <h2>{{title}}</h2>
+  </div>
+  <div class="row">
+
+  {{#each birds as |bird|}}
+      <div class="card col-sm" >
+        <img class="card-img-top" src={{bird.src}} alt="Card image cap">
+
+        <div class="card-body">
+          <h5 class="card-title">{{bird.name}}</h5>
+          <p class="card-text">{{bird.description}}</p>
+          <a href="#" class="btn btn-primary" {{action "ShowBird" bird}}>More info</a>
+        </div>
+      </div>
+
+  {{/each}}
+  </div>
+</div>
+{{outlet}}
